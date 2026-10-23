@@ -1,4 +1,4 @@
-# 🏸 Dashboard Kas Badminton (PB. SmashKas)
+#  Dashboard Kas (Suka Nepak)
 
 Dashboard Kas Badminton adalah *Single Page Application* (SPA) berbasis web yang dirancang khusus untuk mempermudah pengurus komunitas/klub badminton dalam mencatat, melacak, dan melaporkan arus kas (pemasukan dan pengeluaran) secara transparan.
 
@@ -30,7 +30,7 @@ Dashboard Kas Badminton adalah *Single Page Application* (SPA) berbasis web yang
 
 ---
 
-## 🏗 Arsitektur & Alur Sistem
+## Arsitektur & Alur Sistem
 
 ### Desain Sistem (System Architecture)
 
@@ -56,7 +56,7 @@ graph TD
 
 ---
 
-## 👥 Panduan Pengguna (User Guide)
+## Panduan Pengguna (User Guide)
 
 Aplikasi ini menggunakan **Google Sheets** sebagai tempat penyimpanan data Anda agar mudah diakses. Untuk menghubungkannya, kita menggunakan layanan gratis bernama **SteinHQ**.
 
@@ -145,4 +145,3 @@ Semua kode berada di dalam `index.html`. Berikut adalah hierarki komponen utama:
 - **Fallback:** Jika `steinUrl` kosong atau *fetch* gagal, sistem otomatis bergeser memanipulasi `localStorage.getItem('badminton_transactions')`.
 
 ---
-*Dibuat untuk memajukan olahraga badminton komunitas! 🏸*
