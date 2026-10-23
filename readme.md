@@ -2,6 +2,7 @@
 
 Dashboard Kas Badminton adalah *Single Page Application* (SPA) berbasis web yang dirancang khusus untuk mempermudah pengurus komunitas/klub badminton dalam mencatat, melacak, dan melaporkan arus kas (pemasukan dan pengeluaran) secara transparan.
 
+![Preview Dashboard](assets/img/sncs.png)
 ![Preview Dashboard](assets/img/screencapture-annurimat91-github-io-cashflowsn-2026-10-23-20_35_39.png)
 
 ---
