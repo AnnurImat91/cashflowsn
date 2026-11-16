@@ -111,16 +111,15 @@
 
         // --- KOMPONEN LOGO BRAND (Bisa diganti file lokal ./logo.png atau lewat menu Config) ---
         const BrandLogo = ({ logoUrl }) => {
-            const defaultLogo = "./assets/img/logo-removebg-preview.png"; 
+            const defaultLogo = ""; 
             const activeLogo = logoUrl || defaultLogo;
 
             if (activeLogo) {
                 return (
                     <img 
                         src={activeLogo} 
-                        alt="Logo SUKA NEPAK
-                        " 
-                        className="w-11 h-11 object-contain rounded-xl bg-[#059669] border border-slate-100 p-0.5 shrink-0 shadow-sm"
+                        alt="Logo PB. SmashKas" 
+                        className="w-9 h-9 object-contain rounded-xl bg-white border border-slate-100 p-0.5 shrink-0 shadow-sm"
                     />
                 );
             }
@@ -141,8 +140,9 @@
         const Icons = {
             Dashboard: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>,
             Turnamen: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>,
-            Kamis: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>,
-            Sabtu: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>,
+            'Mabar Kamis': () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>,
+            'Mabar Sabtu': () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>,
+            Lainnya: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>,
             Export: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>,
             Settings: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>,
             Plus: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"></path></svg>,
@@ -156,6 +156,43 @@
             Refresh: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>,
             Database: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>,
             Image: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+        };
+
+        // --- KONFIGURASI KATEGORI & TAB ---
+        const CATEGORIES = [
+            {
+                id: 'Turnamen',
+                label: 'Turnamen',
+                mobileLabel: 'Turnamen',
+                title: 'Keuangan Turnamen',
+                subtitle: 'Pencatatan pemasukan & pengeluaran kegiatan turnamen (pendaftaran, deposit kok, konsumsi).'
+            },
+            {
+                id: 'Mabar Kamis',
+                label: 'Mabar Kamis',
+                mobileLabel: 'Kamis',
+                title: 'Keuangan Mabar Kamis',
+                subtitle: 'Pencatatan jadwal mabar rutin hari Kamis (member GOR, kok slop, jam tambahan).'
+            },
+            {
+                id: 'Mabar Sabtu',
+                label: 'Mabar Sabtu',
+                mobileLabel: 'Sabtu',
+                title: 'Keuangan Mabar Sabtu',
+                subtitle: 'Pencatatan jadwal mabar rutin hari Sabtu (member GOR, kok slop, jam tambahan).'
+            },
+            {
+                id: 'Lainnya',
+                label: 'Lainnya',
+                mobileLabel: 'Lainnya',
+                title: 'Lainnya',
+                subtitle: 'Pencatatan pengeluaran & kebutuhan operasional lain-lain di luar jadwal rutin.'
+            }
+        ];
+
+        const getCategoryLabel = (catId) => {
+            const found = CATEGORIES.find(c => c.id === catId);
+            return found ? found.label : catId;
         };
 
         // --- UTILS ---
@@ -203,7 +240,7 @@
             // Supabase & Brand Logo State
             const [supabaseUrl, setSupabaseUrl] = useState(() => storage.get('supabase_url', ''));
             const [supabaseKey, setSupabaseKey] = useState(() => storage.get('supabase_key', ''));
-            const [snLogo, setsnLogo] = useState(() => storage.get('sn_logo', ''));
+            const [clubLogo, setClubLogo] = useState(() => storage.get('club_logo', ''));
 
             const supabaseClient = useMemo(
                 () => getSupabaseClient(supabaseUrl, supabaseKey),
@@ -265,12 +302,13 @@
                     }
                 }
                 const demoData = [
-                    { id: '1', tanggal: '2026-03-01', kategori: 'Kamis', tipe: 'Pemasukan', nominal: 150000, keterangan: 'Iuran Kamis member Sabtu' },
-                    { id: '2', tanggal: '2026-03-01', kategori: 'Kamis', tipe: 'Pengeluaran', nominal: 80000, keterangan: 'Sewa lapangan Gor 2 jam' },
-                    { id: '3', tanggal: '2026-03-05', kategori: 'Sabtu', tipe: 'Pemasukan', nominal: 100000, keterangan: 'Uang pendaftaran Sabtu pekan 1' },
-                    { id: '4', tanggal: '2026-03-05', kategori: 'Sabtu', tipe: 'Pengeluaran', nominal: 65000, keterangan: 'Beli 1 slop kok Victor' },
+                    { id: '1', tanggal: '2026-03-05', kategori: 'Mabar Kamis', tipe: 'Pemasukan', nominal: 140000, keterangan: 'Iuran mabar rutin Kamis malam' },
+                    { id: '2', tanggal: '2026-03-05', kategori: 'Mabar Kamis', tipe: 'Pengeluaran', nominal: 80000, keterangan: 'Sewa lapangan GOR Kamis 2 jam' },
+                    { id: '3', tanggal: '2026-03-07', kategori: 'Mabar Sabtu', tipe: 'Pemasukan', nominal: 180000, keterangan: 'Iuran mabar member Sabtu' },
+                    { id: '4', tanggal: '2026-03-07', kategori: 'Mabar Sabtu', tipe: 'Pengeluaran', nominal: 105000, keterangan: 'Beli 1 slop kok untuk mabar Sabtu' },
                     { id: '5', tanggal: '2026-03-10', kategori: 'Turnamen', tipe: 'Pemasukan', nominal: 500000, keterangan: 'Sponsorship toko olahraga' },
-                    { id: '6', tanggal: '2026-03-10', kategori: 'Turnamen', tipe: 'Pengeluaran', nominal: 250000, keterangan: 'DP Pendaftaran Turnamen Inter-sn' }
+                    { id: '6', tanggal: '2026-03-10', kategori: 'Turnamen', tipe: 'Pengeluaran', nominal: 250000, keterangan: 'DP Pendaftaran Turnamen Inter-Club' },
+                    { id: '7', tanggal: '2026-03-12', kategori: 'Lainnya', tipe: 'Pengeluaran', nominal: 45000, keterangan: 'Beli perlengkapan P3K & grip cadangan' }
                 ];
                 setTransactions(demoData);
                 storage.set('badminton_transactions', JSON.stringify(demoData));
@@ -372,8 +410,8 @@
                     <aside className="hidden md:flex flex-col w-64 bg-white border-r border-slate-200 shadow-sm z-10">
                         <div className="flex items-center justify-between px-6 h-20 border-b border-slate-100">
                             <div className="flex items-center space-x-3 text-emerald-600 font-bold text-xl">
-                                <BrandLogo logoUrl={snLogo} />
-                                <span className="truncate">SUKA NEPAK</span>
+                                <BrandLogo logoUrl={clubLogo} />
+                                <span className="truncate">PB. SmashKas</span>
                             </div>
                         </div>
 
@@ -387,14 +425,23 @@
 
                         <nav className="flex-1 overflow-y-auto py-4">
                             <ul className="space-y-1 px-3">
-                                {['Dashboard', 'Turnamen', 'Kamis', 'Sabtu'].map(tab => (
-                                    <li key={tab}>
+                                <li>
+                                    <button 
+                                        onClick={() => setActiveTab('Dashboard')}
+                                        className={`w-full flex items-center px-4 py-3 rounded-xl text-sm font-medium transition-all ${activeTab === 'Dashboard' ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/20' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`}
+                                    >
+                                        <span className="mr-3">{Icons.Dashboard()}</span>
+                                        Dashboard
+                                    </button>
+                                </li>
+                                {CATEGORIES.map(cat => (
+                                    <li key={cat.id}>
                                         <button 
-                                            onClick={() => setActiveTab(tab)}
-                                            className={`w-full flex items-center px-4 py-3 rounded-xl text-sm font-medium transition-all ${activeTab === tab ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/20' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`}
+                                            onClick={() => setActiveTab(cat.id)}
+                                            className={`w-full flex items-center px-4 py-3 rounded-xl text-sm font-medium transition-all ${activeTab === cat.id ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/20' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`}
                                         >
-                                            <span className="mr-3">{Icons[tab]()}</span>
-                                            {tab === 'Kamis' ? 'Kamis (Kamis & Sabtu)' : tab}
+                                            <span className="mr-3">{Icons[cat.id]()}</span>
+                                            <span className="truncate">{cat.label}</span>
                                         </button>
                                     </li>
                                 ))}
@@ -421,8 +468,8 @@
                         {/* Header Mobile */}
                         <header className="md:hidden flex items-center justify-between bg-white px-4 py-3 border-b border-slate-200 z-20">
                             <div className="font-bold text-lg text-emerald-600 flex items-center space-x-2.5">
-                                <BrandLogo logoUrl={snLogo} />
-                                <span>SUKA NEPAK</span>
+                                <BrandLogo logoUrl={clubLogo} />
+                                <span>PB. SmashKas</span>
                             </div>
                             <div className="flex space-x-1">
                                 <button onClick={() => setIsExportModalOpen(true)} className="p-2 text-slate-600 hover:bg-slate-100 rounded-lg" title="Export PDF"><Icons.Export /></button>
@@ -452,7 +499,7 @@
                                         {activeTab !== 'Dashboard' && (
                                             <CategoryView 
                                                 category={activeTab} 
-                                                title={activeTab === 'Kamis' ? 'Keuangan Kamis (Kamis & Sabtu)' : `Keuangan ${activeTab}`}
+                                                categoryInfo={CATEGORIES.find(c => c.id === activeTab)}
                                                 data={transactions} 
                                                 onAdd={() => { setEditingTx(null); setIsAddModalOpen(true); }}
                                                 onEdit={(tx) => { setEditingTx(tx); setIsAddModalOpen(true); }}
@@ -465,15 +512,22 @@
                         </main>
 
                         {/* Bottom Bar Navigation Mobile */}
-                        <nav className="md:hidden bg-white border-t border-slate-200 flex justify-around p-1 z-20 shadow-lg">
-                            {['Dashboard', 'Turnamen', 'Kamis', 'Sabtu'].map(tab => (
+                        <nav className="md:hidden bg-white border-t border-slate-200 flex justify-around px-1 py-1 z-20 shadow-lg">
+                            <button 
+                                onClick={() => setActiveTab('Dashboard')}
+                                className={`flex flex-col items-center justify-center py-2 px-1 rounded-xl text-[11px] w-full transition-all ${activeTab === 'Dashboard' ? 'text-emerald-600 font-bold bg-emerald-50' : 'text-slate-500'}`}
+                            >
+                                <span className="mb-0.5">{Icons.Dashboard()}</span>
+                                <span className="truncate">Home</span>
+                            </button>
+                            {CATEGORIES.map(cat => (
                                 <button 
-                                    key={tab} 
-                                    onClick={() => setActiveTab(tab)}
-                                    className={`flex flex-col items-center justify-center py-2 px-1 rounded-xl text-xs w-full transition-all ${activeTab === tab ? 'text-emerald-600 font-bold bg-emerald-50' : 'text-slate-500'}`}
+                                    key={cat.id} 
+                                    onClick={() => setActiveTab(cat.id)}
+                                    className={`flex flex-col items-center justify-center py-2 px-1 rounded-xl text-[11px] w-full transition-all ${activeTab === cat.id ? 'text-emerald-600 font-bold bg-emerald-50' : 'text-slate-500'}`}
                                 >
-                                    <span className="mb-0.5">{Icons[tab]()}</span>
-                                    {tab === 'Kamis' ? 'Kamis' : tab}
+                                    <span className="mb-0.5">{Icons[cat.id]()}</span>
+                                    <span className="truncate">{cat.mobileLabel}</span>
                                 </button>
                             ))}
                         </nav>
@@ -500,17 +554,17 @@
                         <SettingsModal 
                             currentUrl={supabaseUrl}
                             currentKey={supabaseKey}
-                            currentLogo={snLogo}
+                            currentLogo={clubLogo}
                             onSave={(url, key, logo) => { 
                                 setSupabaseUrl(url); 
                                 setSupabaseKey(key);
-                                setsnLogo(logo);
+                                setClubLogo(logo);
                                 storage.set('supabase_url', url);
                                 storage.set('supabase_key', key);
                                 if (logo) {
-                                    storage.set('sn_logo', logo);
+                                    storage.set('club_logo', logo);
                                 } else {
-                                    storage.remove('sn_logo');
+                                    storage.remove('club_logo');
                                 }
                                 setIsSettingsModalOpen(false);
                                 showToast("Pengaturan logo & database tersimpan.");
@@ -617,9 +671,9 @@
                                         className="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs md:text-sm text-slate-700 outline-none focus:ring-2 focus:ring-emerald-500"
                                     >
                                         <option value="All">Semua Kategori</option>
-                                        <option value="Turnamen">Turnamen</option>
-                                        <option value="Kamis">Kamis</option>
-                                        <option value="Sabtu">Sabtu</option>
+                                        {CATEGORIES.map(cat => (
+                                            <option key={cat.id} value={cat.id}>{cat.label}</option>
+                                        ))}
                                     </select>
                                 )}
 
@@ -691,7 +745,7 @@
                                                 {showCategoryColumn && (
                                                     <td className="px-6 py-4 whitespace-nowrap">
                                                         <span className="px-2.5 py-1 bg-slate-100 border border-slate-200 rounded-lg text-xs font-medium text-slate-700">
-                                                            {item.kategori}
+                                                            {getCategoryLabel(item.kategori)}
                                                         </span>
                                                     </td>
                                                 )}
@@ -730,7 +784,7 @@
                                                 <span className="text-xs text-slate-400 font-medium">{formatDate(item.tanggal)}</span>
                                                 {showCategoryColumn && (
                                                     <span className="ml-2 inline-block px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-[10px] font-semibold">
-                                                        {item.kategori}
+                                                        {getCategoryLabel(item.kategori)}
                                                     </span>
                                                 )}
                                                 <h4 className="font-semibold text-slate-800 text-sm">{item.keterangan}</h4>
@@ -800,14 +854,13 @@
             }, [data]);
 
             const summaryByCategory = useMemo(() => {
-                const cats = ['Turnamen', 'Kamis', 'Sabtu'];
-                return cats.map(cat => {
+                return CATEGORIES.map(cat => {
                     let pem = 0, peng = 0;
-                    data.filter(t => t.kategori === cat).forEach(t => {
+                    data.filter(t => t.kategori === cat.id).forEach(t => {
                         if (t.tipe === 'Pemasukan') pem += Number(t.nominal) || 0;
                         else peng += Number(t.nominal) || 0;
                     });
-                    return { name: cat, saldo: pem - peng, pemasukan: pem, pengeluaran: peng };
+                    return { id: cat.id, name: cat.label, saldo: pem - peng, pemasukan: pem, pengeluaran: peng };
                 });
             }, [data]);
 
@@ -816,7 +869,7 @@
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                         <div>
                             <h2 className="text-2xl font-bold text-slate-800">Keseluruhan Kas Komunitas</h2>
-                            <p className="text-slate-500 text-sm">Akumulasi seluruh arus kas (Turnamen, Kamis Kamis, & Kamis Sabtu)</p>
+                            <p className="text-slate-500 text-sm">Akumulasi seluruh arus kas (Turnamen, Mabar Kamis, Mabar Sabtu, & Lainnya)</p>
                         </div>
                         <div className="flex space-x-2">
                             <button onClick={onRefresh} className="p-2.5 bg-white border border-slate-200 text-slate-600 rounded-xl hover:bg-slate-100 transition-colors" title="Refresh Data">
@@ -853,12 +906,12 @@
                     {/* Rincian Saldo Per Kategori */}
                     <div className="space-y-3">
                         <h3 className="text-base font-bold text-slate-800">Ringkasan per Kategori</h3>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            {summaryByCategory.map((cat, idx) => (
-                                <div key={idx} className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-                                    <div className="flex justify-between items-center">
-                                        <span className="font-semibold text-slate-700 text-sm">{cat.name === 'Kamis' ? 'Kamis' : cat.name}</span>
-                                        <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${cat.saldo >= 0 ? 'bg-emerald-50 text-emerald-700' : 'bg-rose-50 text-rose-700'}`}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            {summaryByCategory.map((cat) => (
+                                <div key={cat.id} className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+                                    <div className="flex justify-between items-center gap-2">
+                                        <span className="font-semibold text-slate-700 text-sm truncate">{cat.name}</span>
+                                        <span className={`text-xs font-bold px-2 py-0.5 rounded-full shrink-0 ${cat.saldo >= 0 ? 'bg-emerald-50 text-emerald-700' : 'bg-rose-50 text-rose-700'}`}>
                                             Net: {formatIDR(cat.saldo)}
                                         </span>
                                     </div>
@@ -886,7 +939,7 @@
         };
 
         // --- CATEGORY VIEW ---
-        const CategoryView = ({ category, title, data, onAdd, onEdit, onDelete }) => {
+        const CategoryView = ({ category, categoryInfo, data, onAdd, onEdit, onDelete }) => {
             const categoryData = useMemo(() => {
                 return data.filter(t => t.kategori === category);
             }, [data, category]);
@@ -909,12 +962,16 @@
                 return pem - peng;
             }, [data]);
 
+            const displayTitle = categoryInfo?.title || `Keuangan ${category}`;
+            const displaySubtitle = categoryInfo?.subtitle || `Pencatatan khusus untuk pos ${category.toLowerCase()}.`;
+            const shortLabel = categoryInfo?.label || category;
+
             return (
                 <div className="space-y-6 fade-in">
                     <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
                         <div>
-                            <h2 className="text-2xl font-bold text-slate-800">{title}</h2>
-                            <p className="text-slate-500 text-sm">Pencatatan khusus untuk pos {category.toLowerCase()}.</p>
+                            <h2 className="text-2xl font-bold text-slate-800">{displayTitle}</h2>
+                            <p className="text-slate-500 text-sm">{displaySubtitle}</p>
                         </div>
                         <button onClick={onAdd} className="flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-medium shadow-md shadow-emerald-600/20 transition-colors text-sm">
                             <Icons.Plus /> <span>Tambah Transaksi</span>
@@ -924,11 +981,11 @@
                     {/* Summary Cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
                         <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
-                            <span className="text-xs text-slate-500 font-medium">Pemasukan ({category})</span>
+                            <span className="text-xs text-slate-500 font-medium">Pemasukan ({shortLabel})</span>
                             <div className="text-xl font-bold text-emerald-600 mt-1">{formatIDR(totals.pemasukan)}</div>
                         </div>
                         <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
-                            <span className="text-xs text-slate-500 font-medium">Pengeluaran ({category})</span>
+                            <span className="text-xs text-slate-500 font-medium">Pengeluaran ({shortLabel})</span>
                             <div className="text-xl font-bold text-rose-600 mt-1">{formatIDR(totals.pengeluaran)}</div>
                         </div>
                         <div className="bg-emerald-500 p-4 rounded-2xl shadow-md text-white">
@@ -950,11 +1007,14 @@
 
         // --- ADD / EDIT TRANSACTION MODAL ---
         const AddTransactionModal = ({ category, onClose, onSave, initialData }) => {
+            const defaultCategory = initialData?.kategori || category || 'Turnamen';
+            const defaultTipe = initialData?.tipe || (defaultCategory === 'Lainnya' ? 'Pengeluaran' : 'Pemasukan');
+
             const [formData, setFormData] = useState({
                 id: initialData?.id,
                 tanggal: initialData?.tanggal || new Date().toISOString().split('T')[0],
-                kategori: initialData?.kategori || category || 'Turnamen',
-                tipe: initialData?.tipe || 'Pemasukan',
+                kategori: defaultCategory,
+                tipe: defaultTipe,
                 hargaSatuan: initialData ? initialData.nominal : '',
                 qty: 1,
                 keterangan: initialData?.keterangan || ''
@@ -1042,12 +1102,19 @@
                                     <label className="block font-medium text-slate-700 mb-1">Kategori Pos</label>
                                     <select 
                                         value={formData.kategori} 
-                                        onChange={(e) => setFormData({...formData, kategori: e.target.value})} 
+                                        onChange={(e) => {
+                                            const nextCat = e.target.value;
+                                            setFormData({
+                                                ...formData,
+                                                kategori: nextCat,
+                                                tipe: !isEditMode && nextCat === 'Lainnya' ? 'Pengeluaran' : formData.tipe
+                                            });
+                                        }} 
                                         className="w-full border border-slate-200 rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-emerald-500 outline-none bg-white"
                                     >
-                                        <option value="Turnamen">Turnamen</option>
-                                        <option value="Kamis">Kamis</option>
-                                        <option value="Sabtu">Sabtu</option>
+                                        {CATEGORIES.map(cat => (
+                                            <option key={cat.id} value={cat.id}>{cat.label}</option>
+                                        ))}
                                     </select>
                                 </div>
 
@@ -1388,7 +1455,7 @@
                                 <div className="flex items-center justify-between">
                                     <span className="font-bold text-slate-800 flex items-center space-x-2">
                                         <Icons.Image />
-                                        <span>Logo Komunitas (SUKA NEPAK)</span>
+                                        <span>Logo Komunitas (PB. SmashKas)</span>
                                     </span>
                                     {logo && (
                                         <button 
